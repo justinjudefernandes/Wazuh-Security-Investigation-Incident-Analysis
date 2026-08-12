@@ -1,2 +1,32 @@
-# Wazuh-Security-Investigation-Incident-Analysis
-Investigated suspicious Windows and Linux activity by correlating account manipulation, privilege escalation, SSH authentication, potential lateral movement, and file integrity events. Built a timeline using Wazuh telemetry, identified key indicators, documented evidence, and developed response actions and security recommendations.
+# Wazuh Security Investigation & Incident Analysis
+
+## Findings:
+
+### 🔍 Evidence 1 – Initial Download via Google Chrome
+
+
+## Investigation Summary:
+
+
+### Triage (5W & 1H)
+#### WHO:
+
+#### WHAT:
+
+#### WHEN:
+
+#### WHERE:
+
+#### WHY:
+
+#### HOW:
+
+## 🛑 Response Actions:
+
+
+## 💡 Recommendations:
+
+
+## 🧠 Lessons Learned:
+
+
