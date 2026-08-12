@@ -65,16 +65,16 @@ Based on the available evidence, the observed sequence of events is consistent w
 #### WHO:
 ```KQL query
 •	Hosts Involved:
-    o	  Windows 10 Endpoint
-    o  	Ubuntu 24.04 Linux Server
-    o	  Wazuh Monitoring Infrastructure
+    o  Windows 10 Endpoint
+    o  Ubuntu 24.04 Linux Server
+    o  Wazuh Monitoring Infrastructure
 •	Accounts Involved:
-    o	  Windows:
-      *	  student1 (Created, Added to Administrators, Deleted)
-      *   Guest (Enabled)
+    o  Windows:
+        *  student1 (Created, Added to Administrators, Deleted)
+        *  Guest (Enabled)
     o  	Linux:
-      *	fakeuser (Failed SSH authentication attempts)
-      *	mydfir (Successful SSH authentication)
+        *  fakeuser (Failed SSH authentication attempts)
+        *  mydfir (Successful SSH authentication)
 ```
 
 #### WHAT:
@@ -98,18 +98,18 @@ Based on the available evidence, the observed sequence of events is consistent w
 •	Aug 5, 2026 @ 10:24:59 AM - 10:25:17 AM: Multiple failed SSH attempts using fakeuser were observed against the Linux server (192.168.126.164), indicating lateral movement from the Windows endpoint (192.168.126.165).
 •	Aug 5, 2026 @ 10:53:57 AM: A successful SSH login using mydfir was observed, indicating lateral movement from the Windows endpoint.
 •	Monitored files on Windows and Linux were modified and subsequently deleted.
-    o	Windows - Aug 6, 2026 @ 11:21:13 AM
-    o	Linux - Aug 6, 2026 @ 11:50:49 AM
+        o Windows - Aug 6, 2026 @ 11:21:13 AM
+        o Linux - Aug 6, 2026 @ 11:50:49 AM
 
 ```
 
 #### WHERE:
 ```KQL query
-•	Windows Endpoint:
+Windows Endpoint:
 o	Windows Security Event Logs
 o	Local Security Accounts Manager (SAM)
 o	C:\CompanyData
-•	Linux Server:
+Linux Server:
 o	SSH Service
 o	Linux Authentication Logs
 o	/opt/company-data
