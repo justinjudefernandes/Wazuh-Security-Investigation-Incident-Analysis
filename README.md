@@ -60,35 +60,79 @@ Accounts Involved:
 
 #### WHAT:
 ```KQL query
-
+- Enabling of the built-in Guest account.
+- Creation of a new Windows local user account (student1).
+- Addition of student1 to the local Administrators group.
+- Deletion of the student1 account.
+- Multiple failed SSH authentication attempts against the Linux server from the Windows endpoint using the fakeuser account.
+- Successful SSH authentication to the Linux server using the mydfir account.
+- Modification of monitored files on the Windows and Linux systems.
+- Subsequent deletion of the monitored files.
 ```
 
 #### WHEN:
 ```KQL query
-
+- Aug 5, 2026 @ 09:04:19 AM: Enabled the built-in Guest account.
+- Aug 5, 2026 @ 09:10:52 AM: Created the student1 Windows local account.
+- Aug 5, 2026 @ 09:11:11 AM: Added to the Administrators group.
+- Aug 5, 2026 @ 09:11:33 AM: The student1 account was subsequently deleted.
+- Aug 5, 2026 @ 10:24:59 AM - 10:25:17 AM: Multiple failed SSH attempts using fakeuser were observed against the Linux server (192.168.126.164), indicating lateral movement from the Windows endpoint (192.168.126.165).
+- Aug 5, 2026 @ 10:53:57 AM: A successful SSH login using mydfir was observed, indicating lateral movement from the Windows endpoint.
+- Monitored files on Windows and Linux were modified and subsequently deleted.
+  - Windows - Aug 6, 2026 @ 11:21:13 AM
+  - Linux - Aug 6, 2026 @ 11:50:49 AM
 ```
 
 #### WHERE:
 ```KQL query
-
+Windows Endpoint:
+  - Windows Security Event Logs
+  - Local Security Accounts Manager (SAM)
+  - C:\CompanyData
+Linux Server:
+  - SSH Service
+  - Linux Authentication Logs
+  - /opt/company-data
 ```
 
 #### WHY:
 ```KQL query
-
+- Establishing a privileged local account.
+- Enabling an existing account for potential access or persistence.
+- Attempting remote access to the Linux server through SSH.
+- Potential lateral movement from the Windows endpoint to the Linux server.
+- Modifying and deleting monitored files, potentially to alter or remove evidence.
 ```
 
 #### HOW:
 ```KQL query
-
+- Windows account manipulation using local account management to enable Guest, create student1, grant administrative privileges, and delete the account.
+- SSH-based remote access from the Windows endpoint to the Linux server, using fakeuser for failed authentication attempts and mydfir for successful authentication.
+- File system activity on monitored Windows and Linux directories, where files were modified and subsequently deleted.
 ```
 
-## 🛑 Response Actions:
-
+## 🛑 Response Actions Performed:
+- Reviewed Windows account management events to establish the sequence of Guest account enablement, student1 account creation, administrative privilege assignment, and account deletion.
+- Analyzed Windows and Linux authentication logs to identify failed and successful SSH authentication activity.
+- Correlated the SSH activity between the Windows endpoint (192.168.126.165) and Linux server (192.168.126.164) to identify potential lateral movement.
+- Reviewed file integrity events to identify monitored files that were modified and subsequently deleted on both systems.
+- Correlated account, authentication, and file integrity events to establish the overall investigation timeline.
+- Documented the identified activities and associated evidence for further validation and follow-up.
 
 ## 💡 Recommendations:
-
+- Confirm whether the Guest account enablement and student1 account activity were authorized. Disable or remove accounts that are not required.
+- Validate the mydfir SSH authentication with the account owner and investigate the failed fakeuser authentication attempts.
+- Review the affected Windows and Linux files and restore any required data from known-good backups.
+- Review privileged account memberships and implement regular access reviews.
+- Restrict SSH access to authorized administrative sources and accounts where operationally feasible.
+- Expand file integrity monitoring to additional critical systems, files, and directories.
+- Continue monitoring the affected systems for any further unauthorized account, authentication, or file activity.
 
 ## 🧠 Lessons Learned:
-
+- Event correlation is critical: Individual account, authentication, or file events may appear benign, but their correlation can reveal a broader attack sequence.
+- Temporary privileged accounts require visibility: Short-lived accounts that are created, elevated, and deleted can indicate suspicious activity and should receive increased monitoring.
+- Built-in accounts require monitoring: Changes to accounts such as Guest should generate visibility because they can introduce additional access paths.
+- Authentication monitoring provides lateral movement visibility: Correlating source and destination systems with SSH authentication events can help identify potential movement between hosts.
+- File integrity monitoring adds valuable context: File modifications and deletions can provide important evidence when correlated with preceding authentication or account activity.
+- Detection should focus on behavior chains: Combining multiple related events into a single detection or investigation provides better visibility than monitoring each event independently.
 
