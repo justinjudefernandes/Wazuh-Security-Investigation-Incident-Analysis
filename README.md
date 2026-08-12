@@ -142,7 +142,7 @@ Linux Server:
 
 ## 💡 Recommendations:
 - Confirm whether the Guest account enablement and student1 account activity were authorized. Disable or remove accounts that are not required.
-- Validate the mydfir SSH authentication with the account owner and investigate the failed fakeuser authentication attempts.
+- Validate the mydfir SSH authentication with the account owner and investigate the failed 'fakeuser' authentication attempts.
 - Review the affected Windows and Linux files and restore any required data from known-good backups.
 - Review privileged account memberships and implement regular access reviews.
 - Restrict SSH access to authorized administrative sources and accounts where operationally feasible.
@@ -150,10 +150,10 @@ Linux Server:
 - Continue monitoring the affected systems for any further unauthorized account, authentication, or file activity.
 
 ## 🧠 Lessons Learned:
-- Event correlation is critical: Individual account, authentication, or file events may appear benign, but their correlation can reveal a broader attack sequence.
-- Temporary privileged accounts require visibility: Short-lived accounts that are created, elevated, and deleted can indicate suspicious activity and should receive increased monitoring.
-- Built-in accounts require monitoring: Changes to accounts such as Guest should generate visibility because they can introduce additional access paths.
-- Authentication monitoring provides lateral movement visibility: Correlating source and destination systems with SSH authentication events can help identify potential movement between hosts.
-- File integrity monitoring adds valuable context: File modifications and deletions can provide important evidence when correlated with preceding authentication or account activity.
-- Detection should focus on behavior chains: Combining multiple related events into a single detection or investigation provides better visibility than monitoring each event independently.
+- **_Event correlation is critical:_** Individual account, authentication, or file events may appear benign, but their correlation can reveal a broader attack sequence.
+- **_Temporary privileged accounts require visibility:_** Short-lived accounts that are created, elevated, and deleted can indicate suspicious activity and should receive increased monitoring.
+- **_Built-in accounts require monitoring:_** Changes to accounts such as Guest should generate visibility because they can introduce additional access paths.
+- **_Authentication monitoring provides lateral movement visibility:_** Correlating source and destination systems with SSH authentication events can help identify potential movement between hosts.
+- **_File integrity monitoring adds valuable context:_** File modifications and deletions can provide important evidence when correlated with preceding authentication or account activity.
+- **_Detection should focus on behavior chains:_** Combining multiple related events into a single detection or investigation provides better visibility than monitoring each event independently.
 
