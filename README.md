@@ -65,16 +65,16 @@ Based on the available evidence, the observed sequence of events is consistent w
 #### WHO:
 ```KQL query
 •	Hosts Involved:
-  o	Windows 10 Endpoint
-  o	Ubuntu 24.04 Linux Server
-  o	Wazuh Monitoring Infrastructure
+    o	  Windows 10 Endpoint
+    o  	Ubuntu 24.04 Linux Server
+    o	  Wazuh Monitoring Infrastructure
 •	Accounts Involved:
-  o	Windows:
-    *	student1 (Created, Added to Administrators, Deleted)
-    * 	Guest (Enabled)
-  o	Linux:
-    *	fakeuser (Failed SSH authentication attempts)
-    *	mydfir (Successful SSH authentication)
+    o	  Windows:
+      *	  student1 (Created, Added to Administrators, Deleted)
+      *   Guest (Enabled)
+    o  	Linux:
+      *	fakeuser (Failed SSH authentication attempts)
+      *	mydfir (Successful SSH authentication)
 ```
 
 #### WHAT:
