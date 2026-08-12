@@ -44,17 +44,17 @@ Based on the available evidence, the observed sequence of events is consistent w
 ### Triage (5W & 1H)
 #### WHO:
 ```KQL query
-•	Hosts Involved:
-o	Windows 10 Endpoint
-o	Ubuntu 24.04 Linux Server
-o	Wazuh Monitoring Infrastructure
-•	Accounts Involved:
-o	Windows:
-	student1 (Created, Added to Administrators, Deleted)
-	Guest (Enabled)
-o	Linux:
-	fakeuser (Failed SSH authentication attempts)
-	mydfir (Successful SSH authentication)
+- Hosts Involved:
+  - Windows 10 Endpoint
+  - Ubuntu 24.04 Linux Server
+  - Wazuh Monitoring Infrastructure
+- Accounts Involved:
+  - Windows:
+    - student1 (Created, Added to Administrators, Deleted)
+    -	Guest (Enabled)
+  - Linux:
+    -	fakeuser (Failed SSH authentication attempts)
+    -	mydfir (Successful SSH authentication)
 
 ```
 
