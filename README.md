@@ -1,6 +1,6 @@
 # Wazuh Security Investigation & Incident Analysis
 
-## Findings:
+## 🕵️ Findings:
 The investigation identified suspicious activities affecting both Windows and Linux systems. The observed activities included unauthorized account management actions, SSH authentication attempts, and file modifications and deletions detected through endpoint and file integrity monitoring.
 
 The following findings were identified:
@@ -50,7 +50,7 @@ The following findings were identified:
 <img width="785" height="450" alt="image" src="https://github.com/user-attachments/assets/47fa3775-2c7d-4947-bd28-37cc012caaf6" />
 
 
-## Investigation Summary:
+## 📋Investigation Summary:
 The investigation identified suspicious activities involving Windows account management, Linux SSH authentication, and file integrity events across the Windows and Linux systems.
 
 The activity began on the Windows endpoint with the Guest account being enabled. Shortly afterward, a local user account named student1 was created, added to the local Administrators group, and subsequently deleted. These events indicate that a new account was created, granted elevated privileges, and later removed.
@@ -61,7 +61,7 @@ Subsequently, file integrity events were observed on both systems. Monitored fil
 
 Based on the available evidence, the observed sequence of events is consistent with suspicious account manipulation, potential lateral movement, and subsequent file modification and deletion activity across the Windows and Linux environments.
 
-### Triage (5W & 1H)
+### 🧐 Triage (5W & 1H)
 #### WHO:
 ```KQL query
 •	Hosts Involved:
