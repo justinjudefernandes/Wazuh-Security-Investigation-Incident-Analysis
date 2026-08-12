@@ -12,22 +12,42 @@ The following findings were identified:
 - A successful SSH authentication was observed using the mydfir account, indicating lateral movement from the Windows endpoint to the Linux server.
 - Monitored files on both Windows and Linux were modified and subsequently deleted.
 
+### 🔍 Evidence 1 – Guest Account Enabled (Event ID 4722)
 
-### 🔍 Evidence 1 – Guest Account Enabled
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/8ce024bd-6fc3-45b3-92f4-9b0a1a3ae8f2" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/93acc975-af67-45b0-8330-9e5cd5eda777" />
 
 ### 🔍 Evidence 2 – Windows User Account Created (Event ID 4720)
 
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/a5457e12-9ae2-423e-bcfa-193e890cf917" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/d65fa36b-3f3c-41a8-9e5b-83ad9ea002af" />
+
 ### 🔍 Evidence 3 – User Added to Local Administrators Group (Event ID 4732)
+
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/e67898b7-2c8b-4ba3-bd3f-3d200c37cc4e" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/9bd7c859-9cc2-4ab9-8320-50a3b55d2160" />
 
 ### 🔍 Evidence 4 – User Account Deleted (Event ID 4726)
 
-### 🔍 Evidence 5 – Failed SSH Authentication Attempts
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/3d971cef-8e37-4f44-823d-21844c302496" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/bf3b3ff8-80c8-4f1c-a8c2-5274f1840f24" />
 
-### 🔍 Evidence 6 – Successful SSH Authentication
+### 🔍 Evidence 5 – Failed SSH Authentication Attempts (search: fakeuser)
+
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/9ce80e85-3534-4fba-bfc9-e573e512d9ae" />
+<img width="390" height="230" alt="image" src="https://github.com/user-attachments/assets/b46e69ee-b504-4f3a-89d1-3e0fa5708bb0" />
+
+### 🔍 Evidence 6 – Successful SSH Authentication (search: mydfir AND accepted)
+
+<img width="785" height="450" alt="image" src="https://github.com/user-attachments/assets/8566ca37-914e-4da7-8fcf-1208b4dfe87e" />
 
 ### 🔍 Evidence 7 – Windows File Modification & Deletion Event
 
+<img width="785" height="450" alt="image" src="https://github.com/user-attachments/assets/9e72dbd4-3012-4818-a120-b6287b79281c" />
+
 ### 🔍 Evidence 8 – Linux File Modification & Deletion Event
+
+<img width="785" height="450" alt="image" src="https://github.com/user-attachments/assets/47fa3775-2c7d-4947-bd28-37cc012caaf6" />
 
 
 ## Investigation Summary:
