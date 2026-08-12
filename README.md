@@ -61,7 +61,7 @@ Subsequently, file integrity events were observed on both systems. Monitored fil
 
 Based on the available evidence, the observed sequence of events is consistent with suspicious account manipulation, potential lateral movement, and subsequent file modification and deletion activity across the Windows and Linux environments.
 
-## 🧐 Triage (5W & 1H)
+### 🧐 Triage (5W & 1H)
 #### WHO:
 ```KQL query
 •	Hosts Involved:
