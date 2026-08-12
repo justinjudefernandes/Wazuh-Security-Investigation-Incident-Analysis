@@ -106,13 +106,13 @@ Based on the available evidence, the observed sequence of events is consistent w
 #### WHERE:
 ```KQL query
 Windows Endpoint:
-o	Windows Security Event Logs
-o	Local Security Accounts Manager (SAM)
-o	C:\CompanyData
+    o	Windows Security Event Logs
+    o	Local Security Accounts Manager (SAM)
+    o	C:\CompanyData
 Linux Server:
-o	SSH Service
-o	Linux Authentication Logs
-o	/opt/company-data
+    o	SSH Service
+    o	Linux Authentication Logs
+    o	/opt/company-data
 
 ```
 
