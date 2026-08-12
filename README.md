@@ -65,7 +65,7 @@ Based on the available evidence, the observed sequence of events is consistent w
 #### WHO:
 ```KQL query
 Hosts Involved:
-  - Windows 10 Endpoint
+  Windows 10 Endpoint
   - Ubuntu 24.04 Linux Server
   - Wazuh Monitoring Infrastructure
 Accounts Involved:
@@ -80,7 +80,7 @@ Accounts Involved:
 
 #### WHAT:
 ```KQL query
-- Enabling of the built-in Guest account.
+•	Enabling of the built-in Guest account.
 - Creation of a new Windows local user account (student1).
 - Addition of student1 to the local Administrators group.
 - Deletion of the student1 account.
