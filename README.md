@@ -44,11 +44,11 @@ Based on the available evidence, the observed sequence of events is consistent w
 ### Triage (5W & 1H)
 #### WHO:
 ```KQL query
-- Hosts Involved:
+Hosts Involved:
   - Windows 10 Endpoint
   - Ubuntu 24.04 Linux Server
   - Wazuh Monitoring Infrastructure
-- Accounts Involved:
+Accounts Involved:
   - Windows:
     - student1 (Created, Added to Administrators, Deleted)
     -	Guest (Enabled)
