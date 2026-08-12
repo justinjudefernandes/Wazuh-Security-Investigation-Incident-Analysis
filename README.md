@@ -50,7 +50,7 @@ The following findings were identified:
 <img width="785" height="450" alt="image" src="https://github.com/user-attachments/assets/47fa3775-2c7d-4947-bd28-37cc012caaf6" />
 
 
-## 📋Investigation Summary:
+## 📋 Investigation Summary:
 The investigation identified suspicious activities involving Windows account management, Linux SSH authentication, and file integrity events across the Windows and Linux systems.
 
 The activity began on the Windows endpoint with the Guest account being enabled. Shortly afterward, a local user account named student1 was created, added to the local Administrators group, and subsequently deleted. These events indicate that a new account was created, granted elevated privileges, and later removed.
