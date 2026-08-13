@@ -1,5 +1,8 @@
 # Wazuh Security Investigation & Incident Analysis
 
+## 🎯 Objective:
+Investigate suspicious Windows and Linux activity using Wazuh telemetry by correlating account manipulation, privilege changes, authentication activity, potential lateral movement, and file integrity events to reconstruct the attack timeline, identify indicators, assess impact, and develop response recommendations.
+
 ## 🕵️ Findings:
 The investigation identified suspicious activities affecting both Windows and Linux systems. The observed activities included unauthorized account management actions, SSH authentication attempts, and file modifications and deletions detected through endpoint and file integrity monitoring.
 
