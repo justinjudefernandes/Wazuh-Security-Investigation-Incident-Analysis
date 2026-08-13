@@ -93,7 +93,7 @@ Based on the available evidence, the observed sequence of events is consistent w
 - Aug 5, 2026 @ 09:10:52 AM: Created the student1 Windows local account.
 - Aug 5, 2026 @ 09:11:11 AM: Added to the Administrators group.
 - Aug 5, 2026 @ 09:11:33 AM: The student1 account was subsequently deleted.
-- Aug 5, 2026 @ 10:24:59 AM - 10:25:17 AM: Multiple failed SSH attempts using fakeuser were observed against the Linux server (192[.]168[.]126[.]164), indicating lateral movement from the Windows endpoint (192.168.126.165).
+- Aug 5, 2026 @ 10:24:59 AM - 10:25:17 AM: Multiple failed SSH attempts using fakeuser were observed against the Linux server (192[.]168[.]126[.]164), indicating lateral movement from the Windows endpoint (192[.]168[.]126[.]165).
 - Aug 5, 2026 @ 10:53:57 AM: A successful SSH login using mydfir was observed, indicating lateral movement from the Windows endpoint.
 - Monitored files on Windows and Linux were modified and subsequently deleted.
     - Windows - Aug 6, 2026 @ 11:21:13 AM
