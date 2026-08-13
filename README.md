@@ -61,7 +61,7 @@ Subsequently, file integrity events were observed on both systems. Monitored fil
 
 Based on the available evidence, the observed sequence of events is consistent with suspicious account manipulation, potential lateral movement, and subsequent file modification and deletion activity across the Windows and Linux environments.
 
-### 🧐 Triage (5W & 1H)
+### 🧐 Triage (5W & 1H):
 #### WHO:
 ```KQL query
 •	Hosts Involved:
@@ -149,7 +149,7 @@ Linux Server:
 - Expand file integrity monitoring to additional critical systems, files, and directories.
 - Continue monitoring the affected systems for any further unauthorized account, authentication, or file activity.
 
-## 🧠 Lessons Learned:
+## 🧠 Security Operations Takeaways:
 - **_Event correlation is critical:_** Individual account, authentication, or file events may appear benign, but their correlation can reveal a broader attack sequence.
 - **_Temporary privileged accounts require visibility:_** Short-lived accounts that are created, elevated, and deleted can indicate suspicious activity and should receive increased monitoring.
 - **_Built-in accounts require monitoring:_** Changes to accounts such as Guest should generate visibility because they can introduce additional access paths.
