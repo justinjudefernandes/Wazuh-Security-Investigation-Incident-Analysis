@@ -56,9 +56,9 @@ The following findings were identified:
 ## 📋 Investigation Summary:
 The investigation identified suspicious activities involving Windows account management, Linux SSH authentication, and file integrity events across the Windows and Linux systems.
 
-The activity began on the Windows endpoint with the Guest account being enabled. Shortly afterward, a local user account named student1 was created, added to the local Administrators group, and subsequently deleted. These events indicate that a new account was created, granted elevated privileges, and later removed.
+The activity began on the Windows endpoint with the Guest account being enabled. Shortly afterward, a local user account named student1 was created, added to the local Administrators group, and subsequently deleted. The account was created, added to the local Administrators group, and subsequently deleted, demonstrating a sequence of account creation, privilege assignment, and removal.
 
-The investigation then identified SSH authentication activity against the Linux server. Multiple failed SSH authentication attempts using the fakeuser account were observed from the Windows endpoint, followed by a successful SSH authentication using the mydfir account. This activity is consistent with potential lateral movement from the Windows endpoint to the Linux server. 
+The investigation then identified SSH authentication activity against the Linux server. Multiple failed SSH authentication attempts using the ```fakeuser``` account were observed from the Windows endpoint, followed by a successful SSH authentication using the mydfir account. This activity is consistent with potential lateral movement from the Windows endpoint to the Linux server. 
 
 Subsequently, file integrity events were observed on both systems. Monitored files on the Windows endpoint were modified and subsequently deleted, followed by similar modification and deletion activity on the Linux server. This indicates that monitored files on both operating systems were altered during the investigation period.
 
